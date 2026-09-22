@@ -1,0 +1,7 @@
+numpy<2
+# DALI 2.x (2026~) may change APIs used in this lab. Keep DALI 1.x.
+nvidia-dali-cuda120>=1.30,<2.0
+pynvml
+pandas
+matplotlib
+nvtx
