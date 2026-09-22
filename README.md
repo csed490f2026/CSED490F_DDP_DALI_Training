@@ -1,16 +1,4 @@
-# CSED490F Lab 4: DDP / DALI Implementation & Profiling (Vast.ai)
-
-This lab used to run on our Slurm cluster (`sbatch run_cluster_*.sh`). From this semester it runs on a **Vast.ai GPU instance**.
-The things you implement are the same as before (Problem 0 ~ 7). Only the way you run the code has changed.
-
-| | Slurm cluster (before) | Vast.ai (now) |
-|---|---|---|
-| Environment | `run_cluster_*.sh` ran `docker run` | The instance itself is a container running our image |
-| Dataset | pre-downloaded in `/home/dataset`, mounted at `/DATA` | `bash scripts/init.sh` downloads it to `./dataset` |
-| Run | `sbatch run_cluster_dp.sh` | `bash run_vastai_dp.sh` (inside tmux) |
-| Logs | `slurm_logs/{job_id}.out` | `logs/{mode}_{timestamp}.out` |
-| Download results | `scp user@141.223.181.103:...` | `scp -P <PORT> root@<IP>:...` |
-| When finished | job ends automatically | **Destroy the instance yourself** (you pay until you do) |
+# CSED490F Lab 3: DDP / DALI Implementation & Profiling (Vast.ai)
 
 ## 1. Rent an instance
 
